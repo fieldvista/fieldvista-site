@@ -4,142 +4,101 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FieldVista Policy Lab</title>
-  <meta name="description" content="FieldVista Policy Lab designs, tests, and scales evidence-led solutions for agriculture, rural livelihoods, and risk. We deliver policy design, RCTs, evaluations, insurance redesign, M&E systems, and data platforms." />
+  <meta name="description" content="FieldVista Policy Lab partners with governments, donors, and innovators to design, test, and scale evidence-led solutions in agriculture, climate risk, and rural livelihoods." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://www.fieldvista.in/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="FieldVista Policy Lab" />
-  <meta property="og:description" content="Wide-angle insight, grounded action. Policy design, impact evaluations, agri-risk and insurance, and data systems for governments, donors, and innovators." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FieldVista Policy Lab">
+  <meta property="og:description" content="Evidence to decision-making, from the field out.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.fieldvista.in/">
-  <meta property="og:image" content="https://fieldvista.in/og-image.png" />
-
-  <!-- Favicon (simple SVG data URI) -->
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%230a4"/><path d="M15 70 C35 40, 65 40, 85 70" fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/><circle cx="32" cy="38" r="6" fill="white"/></svg>' />
+  <meta property="og:image" content="https://www.fieldvista.in/og-image.png">
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0b1021;
-      --muted: #5b647a;
-      --card: #ffffff;
-      --border: #e8ebf3;
-      --accent: #1b8a5a; /* field green */
-      --accent-2: #2d6cdf; /* policy blue */
-      --accent-contrast: #ffffff;
-      --shadow: 0 8px 24px rgba(13, 21, 36, 0.08);
-      --radius: 16px;
-      --radius-lg: 24px;
+    :root{
+      --bg:#ffffff;
+      --text:#131a2a;
+      --muted:#616d86;
+      --card:#ffffff;
+      --border:#e6ebf3;
+      --accent:#17614a;
+      --accent-2:#2a66c6;
+      --cream:#f7f9fc;
+      --shadow:0 10px 28px rgba(17,27,44,.06);
+      --radius:16px;
+      --radius-lg:22px;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0a0f1a;
-        --text: #e8ecf7;
-        --muted: #a6afc3;
-        --card: #0f1728;
-        --border: #1b2336;
-        --shadow: 0 8px 28px rgba(0,0,0,0.35);
-      }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--bg); color: var(--text); line-height: 1.6;
-    }
-    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
-    .btn { display: inline-block; padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow); }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-contrast); }
-    .btn-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
-    .btn-ghost { background: transparent; color: var(--text); border: 1px solid transparent; }
+    .container{max-width:1160px;margin:0 auto;padding:0 20px}
+    a{color:inherit}
+    .btn{display:inline-block;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;box-shadow:var(--shadow)}
+    .btn-secondary{background:var(--card);border:1px solid var(--border);color:var(--text)}
+    .btn-ghost{background:transparent;border:1px solid transparent;color:var(--text)}
 
-    /* Header */
-    header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(1.2) blur(8px); background: color-mix(in oklab, var(--bg) 86%, transparent); border-bottom: 1px solid var(--border); }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; letter-spacing: 0.2px; }
-    .logo-badge { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #fff; font-weight: 900; box-shadow: var(--shadow); }
-    .logo-word { font-size: 18px; }
-    nav ul { display: flex; list-style: none; margin: 0; padding: 0; gap: 18px; align-items: center; }
-    nav a { text-decoration: none; color: var(--text); font-weight: 600; padding: 8px 10px; border-radius: 10px; }
-    nav a:hover { background: var(--border); }
-
-    .nav-toggle { display: none; background: transparent; border: 0; font-size: 28px; }
-
-    @media (max-width: 860px) {
-      nav ul { display: none; position: absolute; right: 20px; top: 64px; flex-direction: column; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 10px; width: min(86vw, 340px); }
-      nav ul.open { display: flex; }
-      .nav-toggle { display: block; }
+    header{position:sticky;top:0;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text);font-weight:800}
+    .logo-badge{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow);font-weight:900}
+    .logo-word{font-size:18px;letter-spacing:.2px}
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0;align-items:center}
+    nav a{padding:8px 10px;border-radius:10px;text-decoration:none;font-weight:600;color:#1a2236}
+    nav a:hover{background:var(--cream)}
+    .nav-toggle{display:none;background:transparent;border:0;font-size:28px}
+    @media (max-width:860px){
+      nav ul{display:none;position:absolute;right:20px;top:64px;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:10px;width:min(86vw,340px)}
+      nav ul.open{display:flex}
+      .nav-toggle{display:block}
     }
 
-    /* Hero */
-    .hero {
-      position: relative; overflow: hidden; border-bottom: 1px solid var(--border);
-      background: radial-gradient(1200px 600px at 80% -10%, color-mix(in oklab, var(--accent) 16%, transparent), transparent),
-                  radial-gradient(900px 500px at 10% 0%, color-mix(in oklab, var(--accent-2) 18%, transparent), transparent);
-    }
-    .hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; padding: 64px 0 40px; }
-    .hero h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 0 0 12px; }
-    .hero p.lead { font-size: clamp(16px, 2.1vw, 20px); color: var(--muted); margin: 0 0 24px; }
-    .hero-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow); }
-    .pill { display: inline-flex; gap: 8px; align-items: center; padding: 8px 12px; border-radius: 999px; background: color-mix(in oklab, var(--accent) 18%, var(--card)); color: color-mix(in oklab, var(--accent) 30%, black); font-weight: 700; margin-bottom: 14px; }
-    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .hero{background:var(--cream);border-bottom:1px solid var(--border);}
+    .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding:64px 0}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+    .hero h1{font-size:clamp(30px,4.2vw,48px);line-height:1.12;margin:10px 0 14px}
+    .lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);margin:0 0 20px}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .hero-visual{position:relative;border-radius:var(--radius-lg);background:#fff;border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden}
+    .hero-visual svg{display:block;width:100%;height:auto}
+    .hero-note{font-size:12px;color:var(--muted);margin-top:10px}
+    @media (max-width:980px){.hero-inner{grid-template-columns:1fr;padding:48px 0 32px}}
 
-    @media (max-width: 980px) { .hero-inner { grid-template-columns: 1fr; padding: 48px 0 24px; } }
+    section{padding:68px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+    h2{font-size:clamp(22px,3.2vw,32px);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-12{grid-column:span 12}
+    @media (max-width:940px){.col-4,.col-6{grid-column:span 6}}
+    @media (max-width:620px){.col-4,.col-6{grid-column:span 12}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px;font-size:18px}
+    .badge{display:inline-flex;padding:4px 10px;border-radius:999px;background:color-mix(in oklab,var(--accent-2) 12%, var(--card));color:color-mix(in oklab,var(--accent-2) 38%, black);font-weight:700;font-size:12px}
+    .list{margin:10px 0 0 0;padding:0 0 0 16px}
+    .list li{margin:6px 0}
 
-    /* Sections */
-    section { padding: 64px 0; }
-    .sec-header { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
-    .sec-header h2 { font-size: clamp(22px, 3vw, 30px); margin: 0; }
-    .kicker { text-transform: uppercase; letter-spacing: 0.12em; font-weight: 800; color: var(--muted); font-size: 12px; }
+    .process{background:linear-gradient(180deg,#f9fbff, #ffffff)}
+    .process .step{padding:18px;border:1px solid var(--border);border-radius:14px;background:#fff;box-shadow:var(--shadow)}
 
-    /* Cards grid */
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
-    .col-4 { grid-column: span 4; }
-    .col-6 { grid-column: span 6; }
-    .col-12 { grid-column: span 12; }
-    @media (max-width: 940px) { .col-4, .col-6 { grid-column: span 6; } }
-    @media (max-width: 620px) { .col-4, .col-6 { grid-column: span 12; } }
+    .cta{background:linear-gradient(135deg, color-mix(in oklab, var(--accent) 16%, #ffffff), color-mix(in oklab, var(--accent-2) 16%, #ffffff));border:1px solid var(--border);border-radius:20px;padding:26px;color:#0e1b2e;box-shadow:var(--shadow)}
 
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
-    .card h3 { margin: 6px 0 10px; font-size: 18px; }
-    .badge { display: inline-flex; padding: 4px 10px; border-radius: 999px; background: color-mix(in oklab, var(--accent-2) 12%, var(--card)); color: color-mix(in oklab, var(--accent-2) 35%, black); font-weight: 700; font-size: 12px; }
-    .list { margin: 10px 0 0 0; padding: 0 0 0 16px; }
-    .list li { margin: 6px 0; }
-
-    /* CTA band */
-    .cta-band { background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 26%, var(--card)), color-mix(in oklab, var(--accent-2) 26%, var(--card))); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow); color: var(--accent-contrast); }
-    .cta-band h3 { margin: 0 0 8px; }
-
-    /* Footer */
-    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 14px; }
-    .foot-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 18px; }
-    @media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } }
-    .subtle { color: var(--muted); font-size: 14px; }
-
-    /* Utilities */
-    .mt-0{margin-top:0}.mb-0{margin-bottom:0}.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}
-    .flex{display:flex}.gap-8{gap:8px}.gap-12{gap:12px}.gap-16{gap:16px}.items-center{align-items:center}.justify-between{justify-content:space-between}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; color: var(--muted)}
+    footer{border-top:1px solid var(--border);padding:28px 0;font-size:14px;color:var(--muted)}
+    .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:18px}
+    @media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
+    .subtle{color:var(--muted)}
+    .mono{font-family:ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;font-size:12px;color:var(--muted)}
+    .mt-0{margin-top:0}.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FieldVista Policy Lab",
-    "url": "https://fieldvista.in/",
-    "logo": "https://fieldvista.in/og-image.png",
-    "email": "hello@fieldvista.in",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Brahmanwala Chowk, Haridwar Road",
-      "addressLocality": "Dehradun",
-      "postalCode": "248001",
-      "addressCountry": "IN"
-    },
-    "sameAs": []
-  }
-  </script>
 </head>
 <body>
   <a href="#main" class="btn btn-ghost" style="position:absolute;left:-9999px;top:auto;">Skip to content</a>
@@ -154,178 +113,148 @@
         <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="menu" aria-expanded="false">☰</button>
         <ul id="menu" aria-label="Primary">
           <li><a href="#services">Services</a></li>
-          <li><a href="#offers">Packages</a></li>
+          <li><a href="#work">Selected work</a></li>
           <li><a href="#sectors">Sectors</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn btn-secondary" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
     <section class="hero" id="top">
       <div class="container hero-inner">
         <div>
-          <div class="pill">Wide-angle insight, grounded action</div>
-          <h1>Evidence-led policy design and evaluations for agriculture, risk, and rural livelihoods</h1>
-          <p class="lead">We help governments, donors, and innovators design, test, and scale what works. Our team blends RCTs and quasi-experimental methods with field-first diagnostics, geospatial data, and network analytics.</p>
+          <div class="kicker">Policy + evidence</div>
+          <h1>Evidence to decision-making, from the field out</h1>
+          <p class="lead">We partner with governments, funders, and innovators to design, test, and scale what works in agriculture, climate risk, and rural livelihoods.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="mailto:hello@fieldvista.in?subject=Intro%20call%20with%20FieldVista&body=Hi%20FieldVista%2C%20I%27d%20like%20to%20discuss%20...">Talk to us</a>
             <a class="btn btn-secondary" href="#services">Explore services</a>
           </div>
-          <p class="mono mt-16">hello@fieldvista.in  •  +91 73105 09156  •  Dehradun, India</p>
+          <p class="mono mt-16">hello@fieldvista.in • +91 73105 09156 • Dehradun, India</p>
         </div>
-        <div class="hero-card" aria-label="Highlights">
-          <div class="grid">
-            <div class="col-6 card">
-              <span class="badge">Impact</span>
-              <h3>Design → Test → Scale</h3>
-              <p class="subtle">Impact evaluations, pilots, and learning agendas that inform real decisions.</p>
-            </div>
-            <div class="col-6 card">
-              <span class="badge">Agri‑risk</span>
-              <h3>Insurance & climate risk</h3>
-              <p class="subtle">Basis‑risk audits, station mapping, trigger redesign, and claims reviews.</p>
-            </div>
-            <div class="col-6 card">
-              <span class="badge">Data</span>
-              <h3>M&E systems</h3>
-              <p class="subtle">Theory of Change, indicators, dashboards, and training for client teams.</p>
-            </div>
-            <div class="col-6 card">
-              <span class="badge">Networks</span>
-              <h3>Diffusion & targeting</h3>
-              <p class="subtle">Network‑aware program design for adoption, outreach, and resilience.</p>
-            </div>
-          </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#2a66c6" stop-opacity=".18"/>
+                <stop offset="1" stop-color="#17614a" stop-opacity=".18"/>
+              </linearGradient>
+            </defs>
+            <rect width="600" height="420" fill="#ffffff"/>
+            <g fill="url(#g1)">
+              <circle cx="140" cy="120" r="64"/>
+              <circle cx="360" cy="90" r="42"/>
+              <circle cx="460" cy="260" r="72"/>
+              <circle cx="210" cy="300" r="52"/>
+            </g>
+            <g stroke="#dfe6f3" stroke-width="2" fill="none">
+              <path d="M40 350 C 140 260, 320 260, 560 340"/>
+              <path d="M40 280 C 140 220, 320 220, 560 260"/>
+            </g>
+          </svg>
+          <div class="hero-note">Independent, methods-forward, and field-first.</div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
     <section id="services">
       <div class="container">
-        <div class="sec-header">
+        <div class="section-head">
           <h2>What we do</h2>
           <div class="kicker">Services</div>
         </div>
         <div class="grid">
           <div class="col-4 card">
+            <span class="badge">Impact</span>
             <h3>Impact evaluations</h3>
             <ul class="list">
-              <li>RCTs and quasi‑experimental designs</li>
-              <li>Sampling, power, and protocols</li>
-              <li>Mixed‑methods and cost‑effectiveness</li>
+              <li>RCTs & quasi-experimental designs</li>
+              <li>Sampling, power & protocols</li>
+              <li>Mixed-methods & cost-effectiveness</li>
             </ul>
           </div>
           <div class="col-4 card">
-            <h3>Policy design & M&E</h3>
+            <span class="badge">M&E</span>
+            <h3>Policy design & measurement</h3>
             <ul class="list">
-              <li>Theory of Change and indicators</li>
-              <li>Lean measurement and dashboards</li>
+              <li>Theory of Change & indicators</li>
+              <li>Lean measurement & dashboards</li>
               <li>Independent process reviews</li>
             </ul>
           </div>
           <div class="col-4 card">
-            <h3>Agri‑risk & insurance</h3>
+            <span class="badge">Agri-risk</span>
+            <h3>Insurance & climate risk</h3>
             <ul class="list">
-              <li>Basis‑risk diagnostics</li>
-              <li>Trigger and station calibration</li>
-              <li>Claims audits and grievance support</li>
+              <li>Basis-risk diagnostics</li>
+              <li>Trigger & station calibration</li>
+              <li>Claims audits & grievance reviews</li>
             </ul>
           </div>
           <div class="col-4 card">
+            <span class="badge">Data</span>
             <h3>Data & geospatial</h3>
             <ul class="list">
-              <li>Survey tools and data rooms</li>
-              <li>GIS layers and remote sensing</li>
+              <li>Survey tools & data rooms</li>
+              <li>GIS layers & remote sensing</li>
               <li>Reproducible R/Stata pipelines</li>
             </ul>
           </div>
           <div class="col-4 card">
+            <span class="badge">Networks</span>
             <h3>Networks & diffusion</h3>
             <ul class="list">
-              <li>Targeting using network metrics</li>
-              <li>Peer effects and adoption clinics</li>
-              <li>Training for field teams</li>
+              <li>Targeting with network metrics</li>
+              <li>Peer effects & adoption clinics</li>
+              <li>Field team training</li>
             </ul>
           </div>
           <div class="col-4 card">
+            <span class="badge">Advisory</span>
             <h3>Advisory & training</h3>
             <ul class="list">
-              <li>Grant and proposal support</li>
-              <li>Workshops and clinics</li>
-              <li>On‑call research advisory</li>
+              <li>Grant & proposal support</li>
+              <li>Workshops & clinics</li>
+              <li>On-call research advisory</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Packages / Productized offerings -->
-    <section id="offers">
+    <section id="work" class="process">
       <div class="container">
-        <div class="sec-header">
-          <h2>Productized offerings</h2>
-          <div class="kicker">Packages</div>
+        <div class="section-head">
+          <h2>How we work</h2>
+          <div class="kicker">Approach</div>
         </div>
         <div class="grid">
-          <div class="col-6 card">
-            <span class="badge">12 weeks</span>
-            <h3>Evaluation Sprint</h3>
-            <p class="mt-8">A rapid evaluation to inform go or no‑go decisions. Includes design, lean data, and a decision‑ready report.</p>
-            <ul class="list">
-              <li>Design and sampling</li>
-              <li>Tooling and quick fieldwork</li>
-              <li>Pre‑analysis plan and results brief</li>
-            </ul>
+          <div class="col-4 step">
+            <h3>Diagnose</h3>
+            <p class="subtle">Map the system, stakeholders, and constraints. Build a clear Theory of Change with measurable outcomes.</p>
           </div>
-          <div class="col-6 card">
-            <span class="badge">8 weeks</span>
-            <h3>Insurance Redesign Lab</h3>
-            <p class="mt-8">Basis‑risk audit and trigger recalibration with station coverage mapping and claim simulations.</p>
-            <ul class="list">
-              <li>Station and trigger diagnostics</li>
-              <li>Design options and simulations</li>
-              <li>Implementation playbook</li>
-            </ul>
+          <div class="col-4 step">
+            <h3>Test</h3>
+            <p class="subtle">Pilot, evaluate, and iterate using RCTs or quasi-experimental methods paired with mixed-methods insights.</p>
           </div>
-          <div class="col-6 card">
-            <span class="badge">10 weeks</span>
-            <h3>Policy M&E in a Box</h3>
-            <p class="mt-8">A ready M&E system with Theory of Change, indicators, dashboards, and training for teams.</p>
-            <ul class="list">
-              <li>ToC and indicators</li>
-              <li>Dashboard and data room</li>
-              <li>Training and handover</li>
-            </ul>
-          </div>
-          <div class="col-6 card">
-            <span class="badge">Flexible</span>
-            <h3>Research Advisory Retainer</h3>
-            <p class="mt-8">On‑call support for program design, data work, and decision reviews with a fixed monthly scope.</p>
-            <ul class="list">
-              <li>Monthly clinics and reviews</li>
-              <li>Priority channel for quick asks</li>
-              <li>Quarterly methods notes</li>
-            </ul>
+          <div class="col-4 step">
+            <h3>Scale</h3>
+            <p class="subtle">Translate results into policy design, playbooks, and M&E systems that teams can run with confidence.</p>
           </div>
         </div>
-        <div class="container mt-24">
-          <div class="cta-band">
-            <h3>Have an RFP or a problem to scope?</h3>
-            <p class="mb-0">Email <a href="mailto:rfps@fieldvista.in" style="color:#fff;text-decoration:underline;">rfps@fieldvista.in</a> with a short brief or Terms of Reference. We respond with a plan within 3 business days.</p>
-          </div>
+        <div class="cta mt-24">
+          <h3 class="mt-0">Have an RFP or a problem to scope?</h3>
+          <p class="mt-8">Email <a href="mailto:rfps@fieldvista.in" style="text-decoration:underline">rfps@fieldvista.in</a> with a short brief or Terms of Reference. We reply with a plan within 3 business days.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sectors / Who we serve -->
     <section id="sectors">
       <div class="container">
-        <div class="sec-header">
+        <div class="section-head">
           <h2>Who we work with</h2>
           <div class="kicker">Sectors</div>
         </div>
@@ -344,7 +273,7 @@
           </div>
           <div class="col-4 card">
             <h3>Private & insurers</h3>
-            <p class="subtle">Agri‑tech, data providers, and insurers building better risk products.</p>
+            <p class="subtle">Agri-tech, data providers, and insurers building better risk products.</p>
           </div>
           <div class="col-4 card">
             <h3>Academia</h3>
@@ -354,10 +283,9 @@
       </div>
     </section>
 
-    <!-- About -->
     <section id="about">
       <div class="container">
-        <div class="sec-header">
+        <div class="section-head">
           <h2>About FieldVista</h2>
           <div class="kicker">Who we are</div>
         </div>
@@ -380,10 +308,9 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="sec-header">
+        <div class="section-head">
           <h2>Contact</h2>
           <div class="kicker">Work with us</div>
         </div>
@@ -391,18 +318,12 @@
           <div class="col-6 card">
             <h3>Start a conversation</h3>
             <p>Email <a href="mailto:hello@fieldvista.in">hello@fieldvista.in</a> or call <a href="tel:+917310509156">+91 73105 09156</a>.</p>
-            <p class="mb-0">For proposals and tenders, write to <a href="mailto:rfps@fieldvista.in">rfps@fieldvista.in</a>. For hiring, use <a href="mailto:careers@fieldvista.in">careers@fieldvista.in</a>.</p>
+            <p class="mt-12">For proposals and tenders, write to <a href="mailto:rfps@fieldvista.in">rfps@fieldvista.in</a>. For hiring, use <a href="mailto:careers@fieldvista.in">careers@fieldvista.in</a>.</p>
           </div>
           <div class="col-6 card">
             <h3>Address</h3>
-            <p class="mb-0">Brahmanwala Chowk, Haridwar Road<br/>Dehradun 248001, India</p>
+            <p class="mt-0">Brahmanwala Chowk, Haridwar Road<br>Dehradun 248001, India</p>
             <p class="subtle mt-12">We work across India and partner internationally with universities and policy labs.</p>
-          </div>
-        </div>
-        <div class="container mt-24">
-          <div class="cta-band">
-            <h3>Newsletter</h3>
-            <p class="mb-0">Send a blank email to <a href="mailto:hello@fieldvista.in?subject=Subscribe%20to%20newsletter" style="color:#fff;text-decoration:underline;">hello@fieldvista.in</a> with subject “Subscribe to newsletter”.</p>
           </div>
         </div>
       </div>
@@ -420,11 +341,11 @@
       </div>
       <div>
         <h3 class="mt-0">Write to us</h3>
-        <p class="subtle">hello@fieldvista.in<br/>rfps@fieldvista.in<br/>careers@fieldvista.in</p>
+        <p class="subtle">hello@fieldvista.in<br>rfps@fieldvista.in<br>careers@fieldvista.in</p>
       </div>
       <div>
         <h3 class="mt-0">Quick links</h3>
-        <p class="subtle"><a href="#services">Services</a><br/><a href="#offers">Packages</a><br/><a href="#about">About</a><br/><a href="#contact">Contact</a></p>
+        <p class="subtle"><a href="#services">Services</a><br><a href="#work">Selected work</a><br><a href="#about">About</a><br><a href="#contact">Contact</a></p>
       </div>
       <div>
         <h3 class="mt-0">Privacy</h3>
@@ -434,7 +355,6 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
     const btn = document.querySelector('.nav-toggle');
     const menu = document.getElementById('menu');
     if (btn && menu) {
@@ -443,7 +363,6 @@
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
     }
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
