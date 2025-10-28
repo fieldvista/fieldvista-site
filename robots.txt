@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://fieldvista.in/sitemap.xml
+Sitemap: https://www.fieldvista.in/sitemap.xml
