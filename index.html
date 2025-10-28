@@ -14,6 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.fieldvista.in/">
   <meta property="og:image" content="https://www.fieldvista.in/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="fv-favicon.svg">
 
   <style>
     :root{
@@ -50,7 +51,7 @@
     header{position:sticky;top:0;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border);z-index:50}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .logo{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text);font-weight:800}
-    .logo-badge{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow);font-weight:900}
+    .logo img{display:block}
     .logo-word{font-size:18px;letter-spacing:.2px}
     nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0;align-items:center}
     nav a{padding:8px 10px;border-radius:10px;text-decoration:none;font-weight:600;color:#1a2236}
@@ -99,6 +100,26 @@
     .mono{font-family:ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;font-size:12px;color:var(--muted)}
     .mt-0{margin-top:0}.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FieldVista Policy Lab",
+    "url": "https://www.fieldvista.in/",
+    "logo": "https://www.fieldvista.in/og-image.png",
+    "email": "fieldvista.policylab@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sector 135",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "201304",
+      "addressCountry": "IN"
+    },
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
   <a href="#main" class="btn btn-ghost" style="position:absolute;left:-9999px;top:auto;">Skip to content</a>
@@ -106,7 +127,7 @@
   <header>
     <div class="container nav">
       <a class="logo" href="#top" aria-label="FieldVista home">
-        <img src="fieldvista-lockup.svg" alt="FieldVista Policy Lab" style="height:38px;display:block">
+        <img src="fv-mark.svg" alt="FieldVista logo" style="width:36px;height:36px;border-radius:10px;display:block">
         <span class="logo-word">FieldVista <span class="subtle">Policy Lab</span></span>
       </a>
       <nav>
@@ -130,10 +151,12 @@
           <h1>Evidence to decision-making, from the field out</h1>
           <p class="lead">We partner with governments, funders, and innovators to design, test, and scale what works in agriculture, climate risk, and rural livelihoods.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:hello@fieldvista.in?subject=Intro%20call%20with%20FieldVista&body=Hi%20FieldVista%2C%20I%27d%20like%20to%20discuss%20...">Talk to us</a>
+            <!-- CTA links to mailto but hides the address text to avoid duplication -->
+            <a class="btn btn-primary" href="mailto:fieldvista.policylab@gmail.com?subject=Intro%20call%20with%20FieldVista&body=Hi%20FieldVista%2C%20I%27d%20like%20to%20discuss%20...">Talk to us</a>
             <a class="btn btn-secondary" href="#services">Explore services</a>
           </div>
-          <p class="mono mt-16">hello@fieldvista.in • +91 73105 09156 • Dehradun, India</p>
+          <!-- Show phone + city only; email is shown once in Contact section -->
+          <p class="mono mt-16">+91 73105 09156 • Noida, India</p>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +270,7 @@
         </div>
         <div class="cta mt-24">
           <h3 class="mt-0">Have an RFP or a problem to scope?</h3>
-          <p class="mt-8">Email <a href="mailto:rfps@fieldvista.in" style="text-decoration:underline">rfps@fieldvista.in</a> with a short brief or Terms of Reference. We reply with a plan within 3 business days.</p>
+          <p class="mt-8">Email us via the contact address below and include a short brief or ToR. We reply with a plan within 3 business days.</p>
         </div>
       </div>
     </section>
@@ -261,7 +284,7 @@
         <div class="grid">
           <div class="col-4 card">
             <h3>Government</h3>
-            <p class="subtle">State agriculture departments, NABARD, regulators, and line ministries.</p>
+            <p class="subtle">Union ministries, state departments, regulators, and missions.</p>
           </div>
           <div class="col-4 card">
             <h3>Donors & multilaterals</h3>
@@ -302,7 +325,6 @@
           <div class="col-6 card">
             <h3>Leadership</h3>
             <p>FieldVista is led by economists and policy researchers with deep experience in agriculture, social networks, and risk. The team has delivered RCTs, insurance redesigns, and M&E systems across Indian states and partners.</p>
-            <p class="subtle">Founder contact: <a href="mailto:rahul.sna.phd@gmail.com">rahul.sna.phd@gmail.com</a></p>
           </div>
         </div>
       </div>
@@ -317,12 +339,11 @@
         <div class="grid">
           <div class="col-6 card">
             <h3>Start a conversation</h3>
-            <p>Email <a href="mailto:hello@fieldvista.in">hello@fieldvista.in</a> or call <a href="tel:+917310509156">+91 73105 09156</a>.</p>
-            <p class="mt-12">For proposals and tenders, write to <a href="mailto:rfps@fieldvista.in">rfps@fieldvista.in</a>. For hiring, use <a href="mailto:careers@fieldvista.in">careers@fieldvista.in</a>.</p>
+            <p>Email <a href="mailto:fieldvista.policylab@gmail.com">fieldvista.policylab@gmail.com</a> or call <a href="tel:+917310509156">+91 73105 09156</a>.</p>
           </div>
           <div class="col-6 card">
             <h3>Address</h3>
-            <p class="mt-0">Brahmanwala Chowk, Haridwar Road<br>Dehradun 248001, India</p>
+            <p class="mt-0">Sector 135,<br>Noida, Uttar Pradesh 201304, India</p>
             <p class="subtle mt-12">We work across India and partner internationally with universities and policy labs.</p>
           </div>
         </div>
@@ -334,14 +355,14 @@
     <div class="container foot-grid">
       <div>
         <div class="logo" aria-label="FieldVista footer">
-          <span class="logo-badge" aria-hidden="true">FV</span>
+          <img src="fv-mark.svg" alt="FieldVista logo" style="width:36px;height:36px;border-radius:10px;display:block">
           <span class="logo-word">FieldVista <span class="subtle">Policy Lab</span></span>
         </div>
         <p class="subtle mt-12">© <span id="year"></span> FieldVista Policy Lab. All rights reserved.</p>
       </div>
       <div>
-        <h3 class="mt-0">Write to us</h3>
-        <p class="subtle">hello@fieldvista.in<br>rfps@fieldvista.in<br>careers@fieldvista.in</p>
+        <h3 class="mt-0">Contact</h3>
+        <p class="subtle"><a href="#contact">Email or call us</a></p>
       </div>
       <div>
         <h3 class="mt-0">Quick links</h3>
@@ -349,7 +370,7 @@
       </div>
       <div>
         <h3 class="mt-0">Privacy</h3>
-        <p class="subtle">We do not use cookies. Any data you share is used only to respond to your request. For data access or deletion, email privacy@fieldvista.in.</p>
+        <p class="subtle">We do not use cookies. Any data you share is used only to respond to your request. For any data questions, please <a href="#contact">reach us via the contact email</a>.</p>
       </div>
     </div>
   </footer>
