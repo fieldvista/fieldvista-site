@@ -1,0 +1,24 @@
+title: FieldVista Policy Lab
+description: Evidence to decision-making, from the field out — agriculture economics, rural development, and field studies.
+url: https://www.fieldvista.in
+baseurl: ""
+email: fieldvista.policylab@gmail.com
+timezone: Asia/Kolkata
+markdown: kramdown
+theme: null
+collections:
+  reports:
+    output: true
+    permalink: /reports/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+permalink: /insights/:title/
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /og-image.png
+      layout: default
+      canonical_url: https://www.fieldvista.in/
